@@ -32,15 +32,12 @@ function Input({showsData}) {
       }
     }).map((shows, key) => {
       return (
-        <div className='shows' key={key}>
-          <p>
-          {shows.show.name}
-          </p>
-          <p>
-          {shows.show.url}
-          </p>
-          <img src={shows.show.image} alt='SearchImages' />
-        </div>
+
+        <section className='card' key={key}>
+        <img className='card-image' src={shows.show.image} alt='SearchImages' />
+        <h4 className='card-title'>{shows.show.name}</h4>
+        <p>{shows.show.summary}</p> 
+        </section>
       )
     })}
     </>
