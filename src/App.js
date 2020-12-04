@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './App.css';
+import Input from './Input'
 
 function App() {
 
@@ -16,16 +17,19 @@ const loadData = async () => {
   .catch(err => {
     console.log(err)
   })
-  console.log(showsData)
+  // console.log(showsData)
 }
 
 
   return (
-    <div className="App">
-      <>
-      hello
-      </>
+    <>
+    <div className="App-header">
+      <h1>Show Finder</h1>
     </div>
+    <div className='container'>
+    <Input showsData={showsData}/>
+    </div>
+    </>
   );
 }
 
