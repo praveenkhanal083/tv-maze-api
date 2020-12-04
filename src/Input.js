@@ -8,7 +8,7 @@ function Input({showsData}) {
 
   const handleSubmit =() => {
     setSearchShows([...searchShows, {item:searchShows, key:Date.now()}])
-    console.log(searchShows)
+    // console.log(searchShows)
     setSearchTerm('')
   }
   return(
@@ -33,8 +33,12 @@ function Input({showsData}) {
     }).map((shows, key) => {
       return (
         <div className='shows' key={key}>
-          <p>{shows.show.name}</p>
-          <p>{shows.show.url}</p>
+          <p>
+          {shows.show.name}
+          </p>
+          <p>
+          {shows.show.url}
+          </p>
           <img src={shows.show.image} alt='SearchImages' />
         </div>
       )
